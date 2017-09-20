@@ -1,0 +1,35 @@
+.h5p-speak-the-words-set .footer-navigation {
+  clear: both;
+  text-align: center;
+}
+
+.h5p-speak-the-words-set .progress-dot {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  margin: 0 0.25em;
+  cursor: pointer;
+  background-color: #cecece;
+}
+
+.h5p-speak-the-words-set .progress-dot.answered {
+  background-color: #73a2d5;
+}
+
+.h5p-speak-the-words-set .progress-dot.active {
+  background-color: #285585;
+}
+
+.h5p-speak-the-words-set .h5p-joubelui-button.hide {
+  display: none;
+}
+
+.h5p-speak-the-words-set .button-bar {
+  text-align: right;
+}
+
+.h5p-speak-the-words-set .footer-navigation ul {
+  margin: 0;
+  padding: 0.5em;
+}

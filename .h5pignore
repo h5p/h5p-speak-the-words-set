@@ -1,0 +1,10 @@
+node_modules
+app
+tests
+.h5pignore
+.babelrc
+webpack.config.js
+package.json
+package-lock.json
+README.md
+LICENSE.md

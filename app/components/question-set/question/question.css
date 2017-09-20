@@ -1,0 +1,53 @@
+.h5p-speak-the-words-set .h5p-speak-the-words {
+  text-align: left;
+}
+
+.h5p-speak-the-words-set .question.hidden {
+  display: none;
+}
+
+.h5p-speak-the-words-set .h5p-question-buttons {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* Navigation buttons */
+.h5p-speak-the-words-set .h5p-question-previous {
+  margin: 0 0.5em 1.5em 0.5em;
+}
+
+.h5p-speak-the-words-set .h5p-question-next,
+.h5p-speak-the-words-set .h5p-question-previous {
+  padding: 0.5em 0;
+  width: 2.1875em;
+  height: auto;
+}
+
+.h5p-speak-the-words-set .h5p-question-next,
+.h5p-speak-the-words-set .h5p-question-previous,
+.h5p-speak-the-words-set .h5p-question-finish {
+  float: right;
+}
+
+/* Navigation buttons pseudo elements */
+.h5p-speak-the-words-set .h5p-question-next:before,
+.h5p-speak-the-words-set .h5p-question-previous:before {
+  position: relative;
+  padding-right: 0;
+}
+
+.h5p-speak-the-words-set .h5p-question-next:before {
+  content: "\f054";
+  left: 2px;
+}
+
+.h5p-speak-the-words-set .h5p-question-previous:before {
+  content: "\f053";
+  left: -2px;
+}
+
+.h5p-speak-the-words-set .h5p-question-finish:before {
+  content: "\f00c";
+}

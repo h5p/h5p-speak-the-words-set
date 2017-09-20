@@ -1,0 +1,28 @@
+.h5p-speak-the-words-set .solution-screen {
+  text-align: center;
+}
+
+.h5p-speak-the-words-set .greeting {
+  margin: 1em 0 0.75em;
+  font-size: 1.25em;
+  color: #777;
+}
+
+.h5p-speak-the-words-set .feedback-text {
+  margin: 1em 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #1a73d9;
+}
+
+.h5p-speak-the-words-set .solution-screen-button-bar {
+  margin: 2em 0 1em;
+}
+
+.h5p-speak-the-words-set .show-solution-button:before {
+  content: "\f06e ";
+}
+
+.h5p-speak-the-words-set .retry-button:before {
+  content: "\f01e";
+}

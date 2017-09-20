@@ -1,0 +1,51 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './solution-screen.css';
+
+export default class SolutionScreen extends React.Component {
+
+  componentDidMount() {
+    this.props.parent.resizeWrapper();
+    this.scoreBarInstance = H5P.JoubelUI.createScoreBar(this.props.maxScore);
+    this.scoreBarInstance.appendTo(H5P.jQuery(this.scoreBar));
+
+    if (this.scoreBarInstance) {
+      this.scoreBarInstance.setScore(this.props.currentScore);
+      this.scoreBarInstance.updateVisuals();
+    }
+
+    // Dispatch xAPI event if not viewing solutions
+    if (!this.props.showingSolutions) {
+      const success = this.props.currentScore === this.props.maxScore;
+      this.props.parent.triggerXAPIScored(this.props.currentScore, this.props.maxScore, 'completed', true, success);
+    }
+  }
+
+  render() {
+    const feedback = H5P.Question.determineOverallFeedback(
+      this.props.parent.params.overallFeedback, this.props.currentScore / this.props.maxScore
+    );
+
+    return (
+      <div className="solution-screen">
+        <div className='greeting'>Your result:</div>
+        <div className='score-bar' ref={el => this.scoreBar = el} />
+        <div className='feedback-text'>{feedback}</div>
+        <div className="solution-screen-button-bar">
+          <button
+            className='h5p-joubelui-button show-solution-button'
+            onClick={this.props.showSolutions}
+          >
+            Show solution
+          </button>
+          <button
+            className='h5p-joubelui-button retry-button'
+            onClick={this.props.retry}
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
+}

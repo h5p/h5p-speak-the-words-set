@@ -1,0 +1,39 @@
+{
+  "name": "voice-recognition-question-set",
+  "version": "1.0.0",
+  "description": "A language task where you have to answer a set of questions using speech",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "build:watch": "webpack --watch"
+  },
+  "keywords": [
+    "language",
+    "translation",
+    "voice",
+    "recognition",
+    "mic",
+    "microphone",
+    "speech",
+    "question set",
+    "quiz"
+  ],
+  "author": "thomasmars",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.25.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}

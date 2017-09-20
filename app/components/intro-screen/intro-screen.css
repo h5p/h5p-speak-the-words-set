@@ -1,0 +1,20 @@
+.h5p-speak-the-words-set .introduction {
+  padding: 1em;
+  text-align: center;
+}
+
+.h5p-speak-the-words-set .introduction-image {
+  max-height: 20em;
+  max-width: 100%;
+}
+
+.h5p-speak-the-words-set .introduction-title {
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.h5p-speak-the-words-set .introduction-button {
+  margin: 3em auto;
+}
