@@ -29,7 +29,12 @@
   text-align: right;
 }
 
-.h5p-speak-the-words-set .footer-navigation ul {
+.h5p-speak-the-words-set .footer-navigation ol {
   margin: 0;
   padding: 0.5em;
+  list-style-type: none;
+}
+
+.h5p-speak-the-words-set .footer-navigation ol li {
+  display: inline-block;
 }

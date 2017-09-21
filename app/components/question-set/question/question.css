@@ -51,3 +51,11 @@
 .h5p-speak-the-words-set .h5p-question-finish:before {
   content: "\f00c";
 }
+
+.h5p-speak-the-words-set .progress-announcer {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

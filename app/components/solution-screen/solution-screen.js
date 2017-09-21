@@ -2,8 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './solution-screen.css';
 
+/**
+ * Solution Screen component.
+ */
 export default class SolutionScreen extends React.Component {
 
+  /**
+   * Solution screen
+   *
+   * @constructor
+   * @param {Object} props
+   * @param {WrapperClass} props.parent
+   * @param {number} props.currentScore
+   * @param {number} props.maxScore
+   * @param {function} props.retry
+   * @param {function} props.showSolutions
+   * @param {boolean} props.showingSolutions
+   */
+  constructor(props) {
+    super(props);
+    this.l10n = this.props.parent.params.l10n;
+  }
+
+  /**
+   * Runs whenever component is initialized.
+   */
   componentDidMount() {
     this.props.parent.resizeWrapper();
     this.scoreBarInstance = H5P.JoubelUI.createScoreBar(this.props.maxScore);
@@ -21,6 +44,10 @@ export default class SolutionScreen extends React.Component {
     }
   }
 
+  /**
+   * Updates component whenever properties change
+   * @returns {XML}
+   */
   render() {
     const feedback = H5P.Question.determineOverallFeedback(
       this.props.parent.params.overallFeedback, this.props.currentScore / this.props.maxScore
@@ -28,7 +55,7 @@ export default class SolutionScreen extends React.Component {
 
     return (
       <div className="solution-screen">
-        <div className='greeting'>Your result:</div>
+        <div className='greeting'>{this.l10n.solutionScreenResultsLabel}</div>
         <div className='score-bar' ref={el => this.scoreBar = el} />
         <div className='feedback-text'>{feedback}</div>
         <div className="solution-screen-button-bar">
@@ -36,13 +63,13 @@ export default class SolutionScreen extends React.Component {
             className='h5p-joubelui-button show-solution-button'
             onClick={this.props.showSolutions}
           >
-            Show solution
+            {this.l10n.showSolutionsButtonLabel}
           </button>
           <button
             className='h5p-joubelui-button retry-button'
             onClick={this.props.retry}
           >
-            Retry
+            {this.l10n.retryButtonLabel}
           </button>
         </div>
       </div>

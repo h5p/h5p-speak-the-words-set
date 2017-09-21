@@ -28,6 +28,21 @@
         }
       },
       {
+        "name": "introductionImageAltText",
+        "type": "text",
+        "label": "Alternative text for introduction image",
+        "optional": true,
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "showIntroPage",
+              "equals": true
+            }
+          ]
+        }
+      },
+      {
         "name": "introductionTitle",
         "type": "text",
         "label": "Title",
@@ -151,24 +166,64 @@
   {
     "name": "l10n",
     "type": "group",
-    "label": "Localize",
+    "label": "Speak The Words Set labels and texts",
     "importance": "low",
     "common": true,
-    "optional": true,
     "fields": [
       {
         "name": "introductionButtonLabel",
         "label": "Introduction button label",
         "type": "text",
-        "default": "Start Course!",
-        "optional": true
+        "default": "Start Course!"
       },
       {
-        "name": "anotherText",
-        "label": "Another Text",
+        "name": "solutionScreenResultsLabel",
+        "label": "Solution screen results label",
         "type": "text",
-        "default": "Another text",
-        "optional": true
+        "default": "Your results:"
+      },
+      {
+        "name": "showSolutionsButtonLabel",
+        "label": "Show solutions button label",
+        "type": "text",
+        "default": "Show solution"
+      },
+      {
+        "name": "retryButtonLabel",
+        "label": "Retry button label",
+        "type": "text",
+        "default": "Retry"
+      },
+      {
+        "name": "nextQuestionAriaLabel",
+        "label": "Next question accessibility label",
+        "type": "text",
+        "default": "Next question"
+      },
+      {
+        "name": "previousQuestionAriaLabel",
+        "label": "Previous question accessibility label",
+        "type": "text",
+        "default": "Previous question"
+      },
+      {
+        "name": "navigationBarTitle",
+        "label": "Navigation bar title",
+        "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number.",
+        "type": "text",
+        "default": "Slide :num"
+      },
+      {
+        "name": "answeredSlideAriaLabel",
+        "label": "Answered slide accessibility label",
+        "type": "text",
+        "default": "Answered"
+      },
+      {
+        "name": "activeSlideAriaLabel",
+        "label": "Active slide accessibility label",
+        "type": "text",
+        "default": "Currently active"
       }
     ]
   }

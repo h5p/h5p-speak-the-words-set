@@ -9,30 +9,55 @@ H5P.SpeakTheWordsSet = (function (Question) {
   "use strict";
 
   /**
+   * @typedef {Object} Parameters
+   * @property {IntroductionSettings} [introduction]
+   * @property {Object} [questions] Questions settings
+   * @property {Object} [overallFeedback] Feedback ranges
+   * @property {Localizations} l10n
+   */
+
+  /**
+   * @typedef {Object} IntroductionSettings
+   * @property {Object} introductionImage
+   * @property {string} introductionImageAltText
+   * @property {string} introductionTitle
+   * @property {string} introductionText
+   */
+
+  /**
+   * @typedef {Object} Localizations
+   * @property {string} introductionButtonLabel
+   * @property {string} solutionScreenResultsLabel
+   * @property {string} showSolutionsButtonLabel
+   * @property {string} retryButtonLabel
+   * @property {string} nextQuestionAriaLabel
+   * @property {string} previousQuestionAriaLabel
+   * @property {string} navigationBarTitle
+   * @property {string} answeredSlideAriaLabel
+   * @property {string} activeSlideAriaLabel
+   */
+
+  /**
    * Implements required functionality to comply with H5P core.
    *
-   * @param params
-   * @param contentId
+   * @param {Parameters} params
+   * @param {number} contentId
    * @constructor
    */
   function WrapperClass(params, contentId) {
     this.questionWrapper = document.createElement('div');
     this.questionWrapper.className = 'h5p-speak-the-words-set';
 
-    // Check for question existence
-    if (!params.questions || !params.questions.length) {
-      ReactDOM.render((
-        <div>Please supply at least one Question.</div>
-      ), this.questionWrapper);
-      return;
-    }
-
     Question.call(this, 'speak-the-words-set');
     this.contentId = contentId;
     this.params = params;
     this.eventStore = new H5P.EventDispatcher();
     this.questionInstances = [];
+    this.progressAnnouncers = [];
 
+    /**
+     * Resize wrapper
+     */
     this.resizeWrapper = () => {
       this.trigger('resize');
     };
@@ -44,9 +69,17 @@ H5P.SpeakTheWordsSet = (function (Question) {
       this.setContent(this.questionWrapper);
     };
 
-    ReactDOM.render((
-      <SpeakTheWordsSet parent={this} />
-    ), this.questionWrapper);
+    // Render question set into wrapper
+    if (!params.questions || !params.questions.length) {
+      ReactDOM.render((
+        <div>Please supply at least one Question.</div>
+      ), this.questionWrapper);
+    }
+    else {
+      ReactDOM.render((
+        <SpeakTheWordsSet parent={this} />
+      ), this.questionWrapper);
+    }
   }
 
   // Inheritance

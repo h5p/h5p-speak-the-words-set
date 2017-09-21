@@ -2,22 +2,45 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './intro-screen.css';
 
+/**
+ * Introduction Screen component.
+ * Creates a screen with optional image, title and text.
+ */
 export default class IntroScreen extends React.Component {
 
+  /**
+   * Initializes introduction screen.
+   *
+   * @constructor
+   * @param {Object} props
+   * @param {function} props.exitIntroductionScreen
+   * @param {WrapperClass} props.parent
+   */
   constructor(props) {
     super(props);
     this.params = props.parent.params;
   }
 
+  /**
+   * Runs whenever component is initialized.
+   * Sets introduction-text
+   */
   componentDidMount() {
-    this.props.parent.resizeWrapper();
     this.introductionText.innerHTML = this.params.introduction.introductionText;
+    this.props.parent.resizeWrapper();
   }
 
+  /**
+   * Resize wrapper when image has finished loading.
+   */
   imageLoaded() {
     this.props.parent.resizeWrapper();
   }
 
+  /**
+   * Render component whenever properties change.
+   * @returns {XML}
+   */
   render() {
     let image = null;
     const validImage = this.params.introduction
@@ -28,6 +51,7 @@ export default class IntroScreen extends React.Component {
       image = (
         <img
           className='introduction-image'
+          alt={this.params.introduction.introductionImageAltText}
           onLoad={this.imageLoaded.bind(this)}
           src={imgSrc}
         />);
