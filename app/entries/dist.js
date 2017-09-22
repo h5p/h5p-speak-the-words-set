@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SpeakTheWordsSet from '../components/speak-the-words-set';
+import './dist.css';
 
 /**
  * Wrapper function for H5P functionality
@@ -69,10 +70,19 @@ H5P.SpeakTheWordsSet = (function (Question) {
       this.setContent(this.questionWrapper);
     };
 
-    // Render question set into wrapper
+    // No questions
     if (!params.questions || !params.questions.length) {
       ReactDOM.render((
         <div>Please supply at least one Question.</div>
+      ), this.questionWrapper);
+    }
+    // No speech recognition engine
+    else if (!window.annyang) {
+      ReactDOM.render((
+        <div className='unsupported-browser-error'>
+          <div>It looks like your browser does not support speech recognition.</div>
+          <div>Please try again in a browser like Chrome.</div>
+        </div>
       ), this.questionWrapper);
     }
     else {
