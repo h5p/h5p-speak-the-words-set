@@ -13,6 +13,10 @@
   clear: both;
 }
 
+.h5p-speak-the-words-set .h5p-joubelui-button:first-child:last-child {
+  margin: 0 0.5em 1em 0;
+}
+
 /* Navigation buttons */
 .h5p-speak-the-words-set .h5p-question-previous {
   margin: 0 0.5em 1em;
