@@ -98,7 +98,7 @@ export default class QuestionSet extends React.Component {
                 jumpToSlide={this.jumpToSlide.bind(this)}
                 parent={this.props.parent}
                 key={question.subContentId}
-              />)
+              />);
           })
         }
         <FooterNavigation
@@ -109,6 +109,6 @@ export default class QuestionSet extends React.Component {
           parent={this.props.parent}
         />
       </div>
-    )
+    );
   }
 }

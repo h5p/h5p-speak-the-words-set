@@ -30,6 +30,8 @@ export default class Question extends React.Component {
     });
     props.parent.questionInstances.push(this.instance);
 
+    props.parent.on('resize', () => this.instance.trigger('resize', {fromParent: true}));
+
     // Add navigation buttons
     this.lastIndex = props.parent.params.questions.length - 1;
     const showFinishButton = props.slideIndex === this.lastIndex;
@@ -52,7 +54,7 @@ export default class Question extends React.Component {
 
     if (showNextButton) {
       this.instance.addButton('next', '', () => {
-          props.jumpToSlide(props.slideIndex + 1)
+          props.jumpToSlide(props.slideIndex + 1);
         }, true,
         {
           href: '#', // Use href since this is a navigation button
@@ -62,7 +64,7 @@ export default class Question extends React.Component {
 
     if (showPreviousButton) {
       this.instance.addButton('previous', '', () => {
-          props.jumpToSlide(props.slideIndex - 1)
+          props.jumpToSlide(props.slideIndex - 1);
         }, true,
         {
           href: '#', // Use href since this is a navigation button
@@ -81,7 +83,11 @@ export default class Question extends React.Component {
     this.instance.attach($questionContainer);
 
     // Listen for resize event and propagate them to parent
-    this.instance.on('resize', this.props.parent.resizeWrapper);
+    this.instance.on('resize', (event) => {
+      if(event.data === undefined || event.data.fromParent !== true) {
+        this.props.parent.resizeWrapper();
+      }
+    });
 
     // Listen for user interactions on instance and enhance them
     this.instance.on('xAPI', this.enhanceXAPIEvent.bind(this));
@@ -149,6 +155,6 @@ export default class Question extends React.Component {
           </div>
         <div ref={el => this.el = el}/>
       </div>
-    )
+    );
   }
 }

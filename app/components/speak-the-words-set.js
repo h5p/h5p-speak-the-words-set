@@ -132,7 +132,7 @@ export default class SpeakTheWordsSet extends React.Component {
           exitIntroductionScreen={this.exitIntroductionScreen.bind(this)}
           parent={this.props.parent}
         />
-      )
+      );
     }
 
     let solutionScreen = null;
@@ -150,7 +150,7 @@ export default class SpeakTheWordsSet extends React.Component {
           showSolutions={this.showSolutions.bind(this)}
           parent={this.props.parent}
         />
-      )
+      );
     }
 
     return (

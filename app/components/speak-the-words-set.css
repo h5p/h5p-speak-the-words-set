@@ -1,5 +1,6 @@
 .h5p-speak-the-words-set .h5p-question-content {
    margin: 0;
+   border-bottom: 1px solid #eee;
  }
 
 .h5p-speak-the-words-set .h5p-question-introduction {
@@ -28,19 +29,31 @@
   margin-top: 0;
 }
 
-.h5p-speak-the-words-set .h5p-question-buttons.h5p-question-visible {
+.h5p-speak-the-words-set .h5p-question-buttons.h5p-question-visible:not(.wrap) {
   margin: 0;
-  padding: 0 1.75em;
+  padding-top: 2em;
 }
 
-.h5p-speak-the-words-set .h5p-speak-the-words:not(.answered):not(.showing-solution) .h5p-question-buttons.h5p-question-visible {
-  border-top: 1px solid #eee;
-  padding: 2em 1.75em 0;
+.h5p-speak-the-words-set .h5p-question-buttons.h5p-question-visible.has-scorebar:not(.wrap) {
+  padding-top: 0;
+  width: calc(100% - 16.5em);
+}
+
+.h5p-speak-the-words-set .h5p-question-buttons.wrap {
+  margin-left: 1.75em;
+  width: calc(100% - 3em);
 }
 
 .h5p-speak-the-words-set .h5p-speak-the-words .h5p-question-feedback.h5p-question-visible {
-  border-top: 1px solid #eee;
-  padding: 1em 1.75em;
+  padding: 1em 1.75em 0;
+}
+
+.h5p-speak-the-words-set .h5p-speak-the-words .h5p-question-scorebar.h5p-question-visible {
+  margin-left: 1.75em;
+}
+
+.h5p-speak-the-words-set .h5p-speak-the-words .h5p-question-scorebar.h5p-question-visible.full-width {
+  width: calc(100% - 3.5em);
 }
 
 .h5p-speak-the-words-set .h5p-speak-the-words .h5p-question-introduction,
