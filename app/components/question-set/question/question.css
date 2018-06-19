@@ -8,9 +8,6 @@
 
 .h5p-speak-the-words-set .h5p-question-buttons {
   content: " ";
-  display: block;
-  height: 0;
-  clear: both;
 }
 
 .h5p-speak-the-words-set .h5p-joubelui-button:first-child:last-child {

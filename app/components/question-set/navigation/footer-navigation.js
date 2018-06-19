@@ -72,7 +72,7 @@ export default class FooterNavigation extends React.Component {
                 >
                 </a>
               </li>
-            )
+            );
           })}
         </ol>
       </div>
