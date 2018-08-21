@@ -11,7 +11,7 @@ H5PPresave['H5P.SpeakTheWordsSet'] = function (content, finished) {
   var presave = H5PEditor.Presave;
   var score = 0;
 
-  if (isContentInValid()) {
+  if (isContentInvalid()) {
     throw new presave.exceptions.InvalidContentSemanticsException('Invalid Speak The Words Set Error');
   }
 
@@ -39,7 +39,7 @@ H5PPresave['H5P.SpeakTheWordsSet'] = function (content, finished) {
    * Check if required parameters is present
    * @return {boolean}
    */
-  function isContentInValid() {
+  function isContentInvalid() {
     return !presave.checkNestedRequirements(content, 'content.questions') || !Array.isArray(content.questions);
   }
 };
