@@ -10,50 +10,50 @@
           "label": "Hình ảnh giới thiệu"
         },
         {
-          "label": "Alternative text for introduction image"
+          "label": "Văn bản thay thế cho hình ảnh giới thiệu"
         },
         {
-          "label": "Title"
+          "label": "Tiêu đề"
         },
         {
-          "label": "Introduction text",
-          "description": "This title will be displayed above the introduction text."
+          "label": "Văn bản giới thiệu",
+          "description": "Tiêu đề này sẽ được hiển thị trên văn bản giới thiệu."
         }
       ]
     },
     {
-      "label": "Questions",
+      "label": "Câu hỏi",
       "widgets": [
         {
-          "label": "Default"
+          "label": "Mặc định"
         }
       ],
       "entity": "Question",
       "field": {
-        "label": "Question"
+        "label": "Câu hỏi"
       }
     },
     {
-      "label": "Overall Feedback",
+      "label": "Phản hồi chung",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Default"
+              "label": "Mặc định"
             }
           ],
-          "label": "Define custom feedback for any score range",
-          "description": "Click the \"Add range\" button to add as many ranges as you need. Example: 0-20% Bad score, 21-91% Average Score, 91-100% Great Score!",
+          "label": "Xác định phản hồi tùy chỉnh cho bất kỳ thang điểm nào",
+          "description": "Bấm \"Thêm thang điểm\" nút để thêm bao nhiêu thang điểm theo nhu cầu của bạn. Ví dụ: 0-20% Điểm kém, 21-91% Điểm trung bình, 91-100% Điểm xuất sắc!",
           "entity": "range",
           "field": {
             "fields": [
               {
-                "label": "Score Range"
+                "label": "Thang điểm"
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Phản hồi cho thanh điểm đã được xác định",
+                "placeholder": "Điền vào phản hồi"
               }
             ]
           }
@@ -61,35 +61,35 @@
       ]
     },
     {
-      "label": "Speak The Words Set labels and texts",
+      "label": "Nhãn và văn bản Bộ câu hỏi luyện nói",
       "fields": [
         {
-          "label": "Introduction button label",
-          "default": "Start Course!"
+          "label": "Nhãn nút giới thiệu",
+          "default": "Bắt đầu chương trình!"
         },
         {
-          "label": "Solution screen results label",
-          "default": "Your results:"
+          "label": "Nhãn kết quả màn hình lời giải",
+          "default": "Kết quả của bạn:"
         },
         {
-          "label": "Show solutions button label",
-          "default": "Show solution"
+          "label": "Nhãn nút hiển thị lời giải",
+          "default": "Hiển thị lời giải"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Nhãn nút thử lại",
+          "default": "Thử lại"
         },
         {
-          "label": "Next question accessibility label",
-          "default": "Next question"
+          "label": "Nhãn truy cập câu hỏi tiếp theo",
+          "default": "Câu hỏi tiếp theo"
         },
         {
-          "label": "Previous question accessibility label",
-          "default": "Previous question"
+          "label": "Nhãn truy cập câu hỏi trước",
+          "default": "Câu hỏi trước"
         },
         {
-          "label": "Navigation bar title",
-          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number.",
+          "label": "Tiêu đề thanh điều hướng",
+          "description": "Tiêu đề cho câu hỏi trong thanh điều hướng. \":num\" sẽ được thay thế bằng số slide thực tế.",
           "default": "Slide :num"
         },
         {
@@ -97,8 +97,8 @@
           "default": "Answered"
         },
         {
-          "label": "Active slide accessibility label",
-          "default": "Currently active"
+          "label": "Nhãn truy cập slide đang hoạt động",
+          "default": "Hiện thời đang hoạt động"
         }
       ]
     }
