@@ -1,13 +1,13 @@
 {
   "semantics": [
     {
-      "label": "Introduction",
+      "label": "Giới thiệu",
       "fields": [
         {
-          "label": "Display introduction"
+          "label": "Hiển thị giới thiệu"
         },
         {
-          "label": "Introduction image"
+          "label": "Hình ảnh giới thiệu"
         },
         {
           "label": "Alternative text for introduction image"
