@@ -17,7 +17,7 @@
         },
         {
           "label": "Testo dell'introduzione",
-          "description": "Questo titolo sarà mostrato sopra il testo dell'introduzione."
+          "description": "Questo titolo sarà mostrato sopra il testo dell'introduzione"
         }
       ]
     },
@@ -89,7 +89,7 @@
         },
         {
           "label": "Titolo della barra di navigazione",
-          "description": "Titoli per le domande nella barra di navigazione. \":num\" sarà sostituito con il numero della slide in corso.",
+          "description": "Titoli per le domande nella barra di navigazione. \":num\" sarà sostituito con il numero della slide in corso",
           "default": "Slide :num"
         },
         {
