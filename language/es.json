@@ -52,8 +52,8 @@
               },
               {},
               {
-                "label": "Feedback for defined score range",
-                "placeholder": "Fill in the feedback"
+                "label": "Realimentación para rango definido de puntaje",
+                "placeholder": "Escriba la realimentación"
               }
             ]
           }
@@ -61,44 +61,44 @@
       ]
     },
     {
-      "label": "Speak The Words Set labels and texts",
+      "label": "Etiquetas y textos para Conjunto Diga las Palabras",
       "fields": [
         {
-          "label": "Introduction button label",
-          "default": "Start Course!"
+          "label": "Etiqueta botón Introducción",
+          "default": "¡Comenzar Curso!"
         },
         {
-          "label": "Solution screen results label",
-          "default": "Your results:"
+          "label": "Etiqueta resultados pantalla Solución",
+          "default": "Sus resultados:"
         },
         {
-          "label": "Show solutions button label",
-          "default": "Show solution"
+          "label": "Etiqueta botón Mostrar resultados",
+          "default": "Mostrar solución"
         },
         {
-          "label": "Retry button label",
-          "default": "Retry"
+          "label": "Etiqueta botón Reintentar",
+          "default": "Reintentar"
         },
         {
-          "label": "Next question accessibility label",
-          "default": "Next question"
+          "label": "Etiqueta accesibilidad Pregunta siguiente ",
+          "default": "Pregunta siguiente"
         },
         {
-          "label": "Previous question accessibility label",
-          "default": "Previous question"
+          "label": "Etiqueta accesibilidad Pregunta anterior",
+          "default": "Pregunta anterior"
         },
         {
-          "label": "Navigation bar title",
-          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number.",
-          "default": "Slide :num"
+          "label": "Título Barra Navegación",
+          "description": "Títulos para preguntas en barra de navegación. \":num\" será remplazado con el número de imagen actual.",
+          "default": "Imagen :num"
         },
         {
-          "label": "Answered slide accessibility label",
-          "default": "Answered"
+          "label": "Etiqueta accesibilidad Imagen contestada",
+          "default": "Contestada"
         },
         {
-          "label": "Active slide accessibility label",
-          "default": "Currently active"
+          "label": "Etiqueta accesibilidad Imagen activa",
+          "default": "Actualmente activa"
         }
       ]
     }
