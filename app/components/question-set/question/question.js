@@ -71,6 +71,9 @@ export default class Question extends React.Component {
           'aria-label': this.l10n.previousQuestionAriaLabel
         });
     }
+
+    // Return question instance to question set
+    props.onInitialized(this.instance);
   }
 
   /**
