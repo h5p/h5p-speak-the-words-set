@@ -31,6 +31,7 @@ export default class QuestionSet extends React.Component {
       this.setState({
         currentSlide: 0
       });
+      this.scores = {};
     });
 
     props.parent.eventStore.on('showSolutions', () => {
@@ -40,6 +41,10 @@ export default class QuestionSet extends React.Component {
     });
 
     this.queueFocus = false;
+    this.questionInstances = [];
+    this.scores = {};
+
+    props.onInitialized(this);
   }
 
   /**
@@ -75,6 +80,48 @@ export default class QuestionSet extends React.Component {
   }
 
   /**
+   * Get current score.
+   * @return {number} Current score.
+   */
+  getScore() {
+    return this.questionInstances.reduce((sum, instance) => {
+      return sum + instance.getScore();
+    }, 0);
+  }
+
+  /**
+   * Get maximum score.
+   * @return {number} Maximum score.
+   */
+  getMaxScore() {
+    return this.questionInstances.reduce((sum, instance) => {
+      return sum + instance.getMaxScore();
+    }, 0);
+  }
+
+  /**
+   * Get xAPI data from children.
+   * @return {object} XAPIData from children.
+   */
+  getXAPIDataFromChildren() {
+    return this.questionInstances
+      .map(child => {
+        if (typeof child.getXAPIData === 'function') {
+          return child.getXAPIData();
+        }
+      })
+      .filter(data => !!data);
+  }
+
+  /**
+   * Handle question instance initialized.
+   * @param {H5P.SpeakTheWords} Question instance.
+   */
+  handleQuestionInitialized(question) {
+    this.questionInstances.push(question);
+  }
+
+  /**
    * Renders component every time properties or state changes.
    * @returns {XML}
    */
@@ -98,6 +145,7 @@ export default class QuestionSet extends React.Component {
                 jumpToSlide={this.jumpToSlide.bind(this)}
                 parent={this.props.parent}
                 key={question.subContentId}
+                onInitialized={this.handleQuestionInitialized.bind(this)}
               />);
           })
         }

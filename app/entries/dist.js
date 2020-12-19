@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SpeakTheWordsSet from '../components/speak-the-words-set';
+import Util from '../components/speak-the-words-set-util';
 import './dist.css';
 
 /**
@@ -49,9 +50,17 @@ H5P.SpeakTheWordsSet = (function (Question) {
     this.questionWrapper = document.createElement('div');
     this.questionWrapper.className = 'h5p-speak-the-words-set';
 
+    params = Util.extend({
+      behaviour: {
+        enableSolutionsButton: true, // @see {@link https://h5p.org/documentation/developers/contracts#guides-header-8}
+        enableRetry: true // @see {@link https://h5p.org/documentation/developers/contracts#guides-header-9}
+      }
+    }, params);
+
     Question.call(this, 'speak-the-words-set');
     this.contentId = contentId;
     this.params = params;
+
     this.eventStore = new H5P.EventDispatcher();
     this.questionInstances = [];
     this.progressAnnouncers = [];
@@ -68,6 +77,66 @@ H5P.SpeakTheWordsSet = (function (Question) {
      */
     this.registerDomElements = () => {
       this.setContent(this.questionWrapper);
+    };
+
+    /**
+     * Check if input has been given.
+     * @return {boolean} True, if answer was given.
+     * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-1}
+     */
+    this.getAnswerGiven = () => {
+      return this.speakTheWordsSet.state.answeredSlides.length > 0;
+    };
+
+    /**
+     * Get latest score.
+     * @return {number} latest score.
+     * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-2}
+     */
+    this.getScore = () => {
+      return this.speakTheWordsSet.getScore();
+    };
+
+    /**
+     * Get maximum possible score.
+     * @return {number} Maximum possible score.
+     * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-3}
+     */
+    this.getMaxScore = () => {
+      return this.speakTheWordsSet.getMaxScore();
+    };
+
+    /**
+     * Show solutions for all sentences.
+     * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-4}
+     */
+    this.showSolutions = () => {
+      this.speakTheWordsSet.showSolutions();
+    };
+
+    /**
+     * Reset task.
+     * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-5}
+     */
+    this.resetTask = () => {
+      this.speakTheWordsSet.retry();
+    };
+
+    /**
+     * Get xAPI data.
+     * @return {object} XAPI statement.
+     * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-6}
+     */
+    this.getXAPIData = () => {
+      return this.speakTheWordsSet.getXAPIData();
+    };
+
+    /**
+     * Get reference to SpeakTheWordsSet object.
+     * @param {object} SpeakTheWordsSet object.
+     */
+    this.handleInitialized = (speakTheWordsSet) => {
+      this.speakTheWordsSet = speakTheWordsSet;
     };
 
     // No questions
@@ -87,7 +156,10 @@ H5P.SpeakTheWordsSet = (function (Question) {
     }
     else {
       ReactDOM.render((
-        <SpeakTheWordsSet parent={this} />
+        <SpeakTheWordsSet
+          parent={this}
+          onInitialized={this.handleInitialized}
+        />
       ), this.questionWrapper);
     }
   }

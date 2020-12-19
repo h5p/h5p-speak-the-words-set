@@ -39,8 +39,7 @@ export default class SolutionScreen extends React.Component {
 
     // Dispatch xAPI event if not viewing solutions
     if (!this.props.showingSolutions) {
-      const success = this.props.currentScore === this.props.maxScore;
-      this.props.parent.triggerXAPIScored(this.props.currentScore, this.props.maxScore, 'completed', true, success);
+      this.props.parent.eventStore.trigger('xAPIanswered');
     }
   }
 
