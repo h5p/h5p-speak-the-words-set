@@ -25,7 +25,7 @@
       "label": "Galderak",
       "widgets": [
         {
-          "label": "Lehenetsia"
+          "label": "Lehentsitakoa"
         }
       ],
       "entity": "Galdera",
@@ -34,26 +34,26 @@
       }
     },
     {
-      "label": "Feedback orokorra",
+      "label": "Feedback Orokorra",
       "fields": [
         {
           "widgets": [
             {
-              "label": "Lehenetsia"
+              "label": "Lehenetsitakoa"
             }
           ],
-          "label": "Definitu feedback pertsonalizatua edozein puntuazio tarterako",
-          "description": "\"Gehitu tartea\" botoia klikatu gehitzeko behar dituzun tarteak. Adibidez: 0-%20 Puntuazio txarra, %21-%91 Tarteko puntuazioa, %91-1%00 Puntuazio bikaina!",
+          "label": "Zehaztu ezazu edozein puntuazio-tarterako feedback pertsonalizatua",
+          "description": "Egin klik \"Gehitu tartea\" botoian behar dituzun tarte guztiak gehitzeko. Adibidez: 0-20% Puntuazio eskasa, 21-91% Batez besteko puntuazioa, 91-100% Puntuazio bikaina!",
           "entity": "tartea",
           "field": {
             "fields": [
               {
-                "label": "Puntuazio tartea"
+                "label": "Puntazio-tartea"
               },
               {},
               {
-                "label": "Definitutako puntuazio tarterako feedbacka",
-                "placeholder": "Bete feedbacka"
+                "label": "Zehaztutako tartearentzako feedbacka",
+                "placeholder": "Idatzi ezazu feedbacka"
               }
             ]
           }
@@ -90,7 +90,7 @@
         {
           "label": "Nabigazio barraren titulua",
           "description": "Nabigazio barrako galderen tutuluak. \":num\" zenbakiaren ordez uneko diapositibaren zenbakia agertuko da.",
-          "default": ":num  diapositiba"
+          "default": ":num diapositiba"
         },
         {
           "label": "Erantzuna emana diapositibaren erabilerraztasun etiketa",
