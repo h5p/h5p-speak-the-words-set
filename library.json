@@ -2,8 +2,8 @@
   "title": "Speak the Words Set",
   "description": "Answer a set of questions using your speech",
   "majorVersion": 1,
-  "minorVersion": 1,
-  "patchVersion": 10,
+  "minorVersion": 2,
+  "patchVersion": 0,
   "runnable": 1,
   "author": "Joubel",
   "license": "MIT",
@@ -37,7 +37,7 @@
     {
       "machineName": "H5P.Question",
       "majorVersion": 1,
-      "minorVersion": 4
+      "minorVersion": 5
     },
     {
       "machineName": "FontAwesome",
