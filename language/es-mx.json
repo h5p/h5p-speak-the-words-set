@@ -90,7 +90,7 @@
         {
           "label": "Título Barra Navegación",
           "description": "Títulos para preguntas en barra de navegación. \":num\" será remplazado con el número de página actual.",
-          "default": "Página:num"
+          "default": "Página :num"
         },
         {
           "label": "Etiqueta accesibilidad Página contestada",
