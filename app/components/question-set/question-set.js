@@ -66,6 +66,11 @@ export default class QuestionSet extends React.Component {
         currentInstance.stop();
       }
 
+      // Stop current introductory media from playing
+      if (typeof currentInstance.pause === 'function') {
+        currentInstance.pause();
+      }
+
       this.props.parent.resizeWrapper();
       this.queueFocus = true;
       this.setState({
@@ -94,6 +99,7 @@ export default class QuestionSet extends React.Component {
                 question={question}
                 slideIndex={idx}
                 currentSlideIndex={this.state.currentSlide}
+                showingQuestions={this.props.showingQuestions}
                 showSolutionScreen={this.props.showSolutionScreen}
                 jumpToSlide={this.jumpToSlide.bind(this)}
                 parent={this.props.parent}
