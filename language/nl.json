@@ -4,7 +4,7 @@
       "label": "Introductie",
       "fields": [
         {
-          "label": "Toon introductie"
+          "label": "Toon inleiding"
         },
         {
           "label": "Introductie-afbeelding"
@@ -17,7 +17,7 @@
         },
         {
           "label": "Introductietekst",
-          "description": "Deze tekst zal boven de introductieknop worden getoond."
+          "description": "Deze tekst zal boven de introductietekst worden getoond."
         }
       ]
     },
@@ -42,8 +42,8 @@
               "label": "Standaard"
             }
           ],
-          "label": "Definieer de aangepaste feedback elke scorereeks",
-          "description": "Klik op de \"Voeg scorereeks toe\" -knop om zoveel scorereeksen toe te voegen als nodig. Voorbeeld: 0-20% Onvoldoende score, 21-91% Gemiddelde score, 91-100% Uitstekende score!",
+          "label": "Definieer aangepaste feedback voor elke scorereeks",
+          "description": "Druk op de \"Voeg scorereeks\"-knop om zoveel reeksen toe te voegen als nodig. Voorbeeld: 0-20% Onvoldoende, 21-91% Gemiddelde score, 91-100% Uitstekende score!",
           "entity": "reeks",
           "field": {
             "fields": [
@@ -61,43 +61,43 @@
       ]
     },
     {
-      "label": "Spreek de woordenset labels en teksten",
+      "label": "Labels en teksten instellen voor Spreek de woorden",
       "fields": [
         {
-          "label": "Label introductie-knop",
-          "default": "Start"
+          "label": "Label voor \"Start\"-knop",
+          "default": "Starten!"
         },
         {
-          "label": "Label oplossing schermresultaten",
+          "label": "Label voor resultatenscherm",
           "default": "Je resultaten:"
         },
         {
-          "label": "Label toon oplossingen-knop",
+          "label": "Label voor \"Toon oplossing\"-knop",
           "default": "Toon oplossing"
         },
         {
-          "label": "Label opnieuw-knop",
+          "label": "Label voor \"Opnieuw\"-knop",
           "default": "Opnieuw"
         },
         {
-          "label": "Toegankelijkheidslabel volgende vraag",
+          "label": "Toegankelijkheidslabel voor \"Volgende vraag\"-knop",
           "default": "Volgende vraag"
         },
         {
-          "label": "Toegankelijkheidslabel vorige vraag",
+          "label": "Toegankelijkheidslabel voor \"Vorige vraag\"-knop",
           "default": "Vorige vraag"
         },
         {
-          "label": "Titel navigatiebalk",
-          "description": "Titels voor vragen in de navigatiebalk. \":num\" zullen worden vervangen door het actuele dia nummer.",
-          "default": "Dia :num"
+          "label": "Titel van navigatiebalk",
+          "description": "Titels voor vragen in de navigatiebalk. \":num\" zullen worden vervangen door het actuele vraag-nummer.",
+          "default": "Vraag :num"
         },
         {
-          "label": "Toegankelijkheidslabel van de beantwoorde dia",
+          "label": "Toegankelijkheidslabel voor \"Beantwoorde vraag\"",
           "default": "Beantwoord"
         },
         {
-          "label": "Toegankelijkheidslabel van de actieve dia",
+          "label": "Toegankelijkheidslabel voor \"Actieve\" vraag",
           "default": "Momenteel actief"
         }
       ]
