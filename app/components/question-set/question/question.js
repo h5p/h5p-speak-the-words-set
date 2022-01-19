@@ -142,7 +142,7 @@ export default class Question extends React.Component {
    * @return {boolean} True, if medium should autoplay, else false.
    */
   prepareIntroMediumAutoplay(params) {
-    if (!params || !params.media || !typeof params.media.type === 'string') {
+    if (!params || !params.media || !params.media.type) {
       return false; // No medium set
     }
 
