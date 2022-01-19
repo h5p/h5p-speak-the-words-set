@@ -24,6 +24,9 @@ export default class Question extends React.Component {
 
     this.l10n = props.parent.params.l10n;
 
+    // Override question's autoplay for introductory medium and take over
+    this.autoplayIntroMedium = this.prepareIntroMediumAutoplay(props.question.params);
+
     // Initializes instance of question, attached when component is mounted
     this.instance = H5P.newRunnable(props.question, props.parent.contentId, undefined, false, {
       parent: props.parent
@@ -134,13 +137,52 @@ export default class Question extends React.Component {
   }
 
   /**
+   * Prepare autoplay behavior of introductory media.
+   * @param {object} params Library/action object form params.
+   * @return {boolean} True, if medium should autoplay, else false.
+   */
+  prepareIntroMediumAutoplay(params) {
+    if (!params || !params.media || !typeof params.media.type === 'string') {
+      return false; // No medium set
+    }
+
+    const type = params.media.type;
+    if (!type.params) {
+      return false; // No parameters found
+    }
+
+    let shouldAutoplay = false;
+
+    // Keep track of desired autoplay behavior and override
+    const library = (type.library || '').split(' ')[0];
+    if (library === 'H5P.Audio') {
+      shouldAutoplay = type.params.autoplay;
+      type.params.autoplay = false;
+    }
+    else if (library === 'H5P.Video' && type.params.playback) {
+      shouldAutoplay = type.params.playback.autoplay;
+      type.params.playback.autoplay = false;
+    }
+
+    return shouldAutoplay;
+  }
+
+  /**
    * Renders the component whenever properties or state changes.
    * @returns {XML}
    */
   render() {
     let classes = 'question';
-    if (this.props.currentSlideIndex !== this.props.slideIndex) {
+    if (!this.props.showingQuestions || this.props.currentSlideIndex !== this.props.slideIndex) {
       classes += ' hidden';
+    }
+    else if (this.autoplayIntroMedium) {
+      if (typeof this.instance.play === 'function') {
+        setTimeout(() => {
+          this.instance.play();
+        }, 0); // H5P.Question audio sections need to be ready
+      }
+      this.autoplayIntroMedium = false; // Only autoplay once
     }
 
     return (
