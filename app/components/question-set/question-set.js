@@ -66,11 +66,6 @@ export default class QuestionSet extends React.Component {
         currentInstance.stop();
       }
 
-      // Stop current introductory media from playing
-      if (typeof currentInstance.pause === 'function') {
-        currentInstance.pause();
-      }
-
       this.props.parent.resizeWrapper();
       this.queueFocus = true;
       this.setState({
