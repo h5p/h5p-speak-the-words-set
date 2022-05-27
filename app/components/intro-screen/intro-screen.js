@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './intro-screen.css';
+import {decode} from 'he';
 
 /**
  * Introduction Screen component.
@@ -61,7 +62,7 @@ export default class IntroScreen extends React.Component {
     if (this.params.introduction.introductionTitle) {
       introductionTitle = (
         <div className='introduction-title'>
-          {this.params.introduction.introductionTitle}
+          {decode(this.params.introduction.introductionTitle)}
         </div>
       );
     }
