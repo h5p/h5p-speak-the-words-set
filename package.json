@@ -7,7 +7,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "cross-env NODE_ENV=production webpack",
-    "build:watch": "webpack --watch"
+    "build:watch": "cross-env NODE_ENV=development --watch"
   },
   "keywords": [
     "language",
