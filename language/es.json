@@ -7,7 +7,7 @@
           "label": "Mostrar introducción"
         },
         {
-          "label": "Imagen de la introducción"
+          "label": "Imagen de introducción"
         },
         {
           "label": "Texto alternativo para imagen de introducción"
@@ -17,7 +17,7 @@
         },
         {
           "label": "Texto de introducción",
-          "description": "Este título será mostrado arriba del texto de la introducción."
+          "description": "Este título se mostrará encima del texto de introducción."
         }
       ]
     },
@@ -25,7 +25,7 @@
       "label": "Preguntas",
       "widgets": [
         {
-          "label": "Predeterminado"
+          "label": "Por defecto"
         }
       ],
       "entity": "Pregunta",
@@ -39,21 +39,21 @@
         {
           "widgets": [
             {
-              "label": "Predeterminado"
+              "label": "Por defecto"
             }
           ],
-          "label": "Definir retroalimentación personalizada para cualquier rango de puntaje",
-          "description": "Haga clic en el botón \"Añadir rango\" para añadir cuantos rangos necesite. Ejemplo: 0-20% Mal puntaje, 21-91% Puntaje Promedio, 91-100% ¡Magnífico Puntaje!",
+          "label": "Definir retroalimentación personalizada para cualquier rango de puntuación",
+          "description": "Haz clic en el botón \"Añadir rango\" para añadir los rangos que necesites. Ejemplo: 0-20% Mala puntuación, 21-91% Puntuación Media, 91-100% ¡Puntuación Estupenda!",
           "entity": "rango",
           "field": {
             "fields": [
               {
-                "label": "Rango del Puntaje"
+                "label": "Rango de Puntuación"
               },
               {},
               {
-                "label": "Retroalimentación para rango de puntaje definido",
-                "placeholder": "Complete la retroalimentación"
+                "label": "Realimentación para el rango de puntuación definido",
+                "placeholder": "Escribe tu retroalimentación"
               }
             ]
           }
@@ -61,43 +61,43 @@
       ]
     },
     {
-      "label": "Etiquetas y textos para Conjunto Diga las Palabras",
+      "label": "Etiquetas y textos para Conjunto de Di las Palabras",
       "fields": [
         {
           "label": "Etiqueta botón Introducción",
           "default": "¡Comenzar Curso!"
         },
         {
-          "label": "Etiqueta resultados pantalla Solución",
-          "default": "Sus resultados:"
+          "label": "Etiqueta de resultados de la pantalla de solución",
+          "default": "Tus resultados:"
         },
         {
           "label": "Etiqueta botón Mostrar resultados",
           "default": "Mostrar solución"
         },
         {
-          "label": "Etiqueta botón Reintentar",
-          "default": "Reintentar"
+          "label": "Etiqueta botón Intentar de nuevo",
+          "default": "Intentar de nuevo"
         },
         {
-          "label": "Etiqueta accesibilidad Pregunta siguiente",
+          "label": "Etiqueta de accesibilidad para Pregunta siguiente",
           "default": "Pregunta siguiente"
         },
         {
-          "label": "Etiqueta accesibilidad Pregunta anterior",
+          "label": "Etiqueta de accesibilidad para Pregunta anterior",
           "default": "Pregunta anterior"
         },
         {
-          "label": "Título Barra Navegación",
-          "description": "Títulos para preguntas en barra de navegación. \":num\" será remplazado con el número de página actual.",
-          "default": "Página:num"
+          "label": "Título de la barra de navegación",
+          "description": "Títulos para preguntas en la barra de navegación. se sustituirá \":num\"por el número de diapositiva actual.",
+          "default": "Diapositiva :num"
         },
         {
-          "label": "Etiqueta accesibilidad Página contestada",
+          "label": "Etiqueta de accesibilidad para diapositiva respondida",
           "default": "Contestada"
         },
         {
-          "label": "Etiqueta accesibilidad página activa",
+          "label": "Etiqueta de accesibilidad para diapositiva activa",
           "default": "Actualmente activa"
         }
       ]
