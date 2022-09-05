@@ -80,6 +80,10 @@
           "default": "Torna-ho a provar"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Etiqueta d’accessibilitat per a la pregunta següent",
           "default": "Pregunta següent"
         },

@@ -80,6 +80,10 @@
           "default": "Yritä uudelleen"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Ruudunlukijan seuraava kysymys teksti",
           "default": "Seuraava kysymys"
         },

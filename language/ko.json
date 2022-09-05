@@ -80,6 +80,10 @@
           "default": "재시도"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "다음 질문 있는 경우 레이블",
           "default": "다음 질문"
         },

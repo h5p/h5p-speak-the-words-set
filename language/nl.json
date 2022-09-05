@@ -80,6 +80,10 @@
           "default": "Opnieuw"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Toegankelijkheidslabel voor \"Volgende vraag\"-knop",
           "default": "Volgende vraag"
         },

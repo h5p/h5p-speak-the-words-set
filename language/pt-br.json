@@ -80,6 +80,10 @@
           "default": "Tentar Novamente"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Rótulo de acessibilidade da próxima questão",
           "default": "Próxima questão"
         },

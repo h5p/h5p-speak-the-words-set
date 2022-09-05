@@ -34,6 +34,7 @@
       }
     },
     {
+      "label": "Kopējā atgriezeniskā saite",
       "fields": [
         {
           "widgets": [
@@ -57,8 +58,7 @@
             ]
           }
         }
-      ],
-      "label": "Kopējā atgriezeniskā saite"
+      ]
     },
     {
       "label": "\"Izrunājiet vārdus kopa\" etiķetes un teksti",
@@ -80,6 +80,10 @@
           "default": "Atkārtot"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Nākamā jautājuma pieejamības etiķete",
           "default": "Nākamais jautājums"
         },
@@ -88,9 +92,9 @@
           "default": "Iepriekšējais jautājums"
         },
         {
+          "label": "Navigācijas joslas nosaukums",
           "description": "Jautājumu nosaukumi navigācijas joslā. \":num\" tiks aizstāts ar faktisko slaida numuru.",
-          "default": "Slaids :num",
-          "label": "Navigācijas joslas nosaukums"
+          "default": "Slaids :num"
         },
         {
           "label": "Atbildēto slaidu pieejamības etiķete",

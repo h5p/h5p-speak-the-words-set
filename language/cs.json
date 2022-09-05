@@ -80,6 +80,10 @@
           "default": "Opakovat"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Popisek Další otázka",
           "default": "Další otázka"
         },

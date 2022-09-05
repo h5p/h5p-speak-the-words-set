@@ -80,6 +80,10 @@
           "default": "Proovi uuesti"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Järgmine küsimus tekstilugeri silt",
           "default": "Järgmine küsimus"
         },

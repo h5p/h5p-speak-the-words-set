@@ -80,6 +80,10 @@
           "default": "Повторить"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Ярлык доступности следующего вопроса",
           "default": "Следующий вопрос"
         },

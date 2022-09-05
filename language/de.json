@@ -80,6 +80,10 @@
           "default": "Wiederholen"
         },
         {
+          "label": "Beschriftung des \"Beenden\"-Buttons",
+          "default": "Beenden"
+        },
+        {
           "label": "Beschriftung des \"Weiter\"-Buttons für Vorlesewerkzeuge (Barrierefreiheit)",
           "default": "Nächste Frage"
         },

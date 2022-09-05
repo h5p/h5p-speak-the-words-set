@@ -80,6 +80,10 @@
           "default": "Опитай пак"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Етикет за Следващ въпрос",
           "default": "Следващ въпрос"
         },
