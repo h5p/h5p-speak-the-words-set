@@ -52,9 +52,27 @@ H5P.SpeakTheWordsSet = (function (Question) {
 
     Question.call(this, 'speak-the-words-set');
     this.contentId = contentId;
-    // Set default text for finishButtonLabel so that existing content won't break:
-    params.finishButtonLabel = params.finishButtonLabel ?? 'Finish';
-    this.params = params;
+
+    // Set defaults
+    this.params = WrapperClass.extend({
+      introduction: {
+        showIntroPage: false
+      },
+      questions: [],
+      l10n: {
+        introductionButtonLabel: 'Start Course!',
+        solutionScreenResultsLabel: 'Your results:',
+        showSolutionsButtonLabel: 'Show solution',
+        retryButtonLabel: 'Retry',
+        finishButtonLabel: 'Finish',
+        nextQuestionAriaLabel: 'Next question',
+        previousQuestionAriaLabel: 'Previous question',
+        navigationBarTitle: 'Slide :num',
+        answeredSlideAriaLabel: 'Answered',
+        activeSlideAriaLabel: 'Currently active'
+      }
+    }, params);
+
     this.eventStore = new H5P.EventDispatcher();
     this.questionInstances = [];
     this.progressAnnouncers = [];
@@ -94,6 +112,30 @@ H5P.SpeakTheWordsSet = (function (Question) {
       ), this.questionWrapper);
     }
   }
+
+  /*
+   * Extend an array just like JQuery's extend.
+   *
+   * @returns {object} Merged objects.
+   */
+  WrapperClass.extend = function () {
+    for (let i = 1; i < arguments.length; i++) {
+      for (let key in arguments[i]) {
+        if (Object.prototype.hasOwnProperty.call(arguments[i], key)) {
+          if (
+            typeof arguments[0][key] === 'object' &&
+            typeof arguments[i][key] === 'object'
+          ) {
+            this.extend(arguments[0][key], arguments[i][key]);
+          }
+          else {
+            arguments[0][key] = arguments[i][key];
+          }
+        }
+      }
+    }
+    return arguments[0];
+  };
 
   // Inheritance
   WrapperClass.prototype = Object.create(Question.prototype);
