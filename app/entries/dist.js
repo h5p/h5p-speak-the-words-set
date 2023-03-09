@@ -52,6 +52,8 @@ H5P.SpeakTheWordsSet = (function (Question) {
 
     Question.call(this, 'speak-the-words-set');
     this.contentId = contentId;
+    // Set default text for finishButtonLabel so that existing content won't break:
+    params.finishButtonLabel = params.finishButtonLabel ?? 'Finish';
     this.params = params;
     this.eventStore = new H5P.EventDispatcher();
     this.questionInstances = [];
