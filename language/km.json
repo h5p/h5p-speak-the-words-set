@@ -80,6 +80,10 @@
           "default": "សាកម្តងទៀត"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Next question accessibility label",
           "default": "សំណួរបន្ទាប់"
         },

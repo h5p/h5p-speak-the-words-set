@@ -196,6 +196,12 @@
         "default": "Retry"
       },
       {
+        "name": "finishButtonLabel",
+        "label": "Finish button label",
+        "type": "text",
+        "default": "Finish"
+      },
+      {
         "name": "nextQuestionAriaLabel",
         "label": "Next question accessibility label",
         "type": "text",

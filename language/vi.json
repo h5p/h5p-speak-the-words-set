@@ -80,6 +80,10 @@
           "default": "Thử lại"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Nhãn truy cập câu hỏi tiếp theo",
           "default": "Câu hỏi tiếp theo"
         },

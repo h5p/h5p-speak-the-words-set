@@ -80,6 +80,10 @@
           "default": "Riprova"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Etichetta di accessibilità per la prossima domanda",
           "default": "Prossima domanda"
         },

@@ -80,6 +80,10 @@
           "default": "Recommencer"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Accès à la question suivante",
           "default": "Question suivante"
         },

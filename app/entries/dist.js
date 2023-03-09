@@ -31,6 +31,7 @@ H5P.SpeakTheWordsSet = (function (Question) {
    * @property {string} solutionScreenResultsLabel
    * @property {string} showSolutionsButtonLabel
    * @property {string} retryButtonLabel
+   * @property {string} finishButtonLabel
    * @property {string} nextQuestionAriaLabel
    * @property {string} previousQuestionAriaLabel
    * @property {string} navigationBarTitle

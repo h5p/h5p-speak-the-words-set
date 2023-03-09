@@ -39,7 +39,7 @@ export default class Question extends React.Component {
     const showPreviousButton = props.slideIndex !== 0;
 
     if (showFinishButton) {
-      this.instance.addButton('finish', 'Finish', () => {
+      this.instance.addButton('finish', this.l10n.finishButtonLabel, () => {
         this.props.parent.eventStore.trigger('showSolutionScreen');
       }, false);
 

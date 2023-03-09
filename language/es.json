@@ -80,6 +80,10 @@
           "default": "Intentar de nuevo"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Etiqueta de accesibilidad para Pregunta siguiente",
           "default": "Pregunta siguiente"
         },

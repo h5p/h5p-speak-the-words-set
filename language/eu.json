@@ -80,6 +80,10 @@
           "default": "Saiatu berriro"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Hurrengo galdera erabilerraztasun etiketa",
           "default": "Hurrengo galdera"
         },

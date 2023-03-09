@@ -80,6 +80,10 @@
           "default": "Prøv igjen"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Next question accessibility label",
           "default": "Neste spørsmål"
         },

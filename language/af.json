@@ -80,6 +80,10 @@
           "default": "Probeer weer"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Volgende vraag toeganklikheidsetiket",
           "default": "Volgende vraag"
         },

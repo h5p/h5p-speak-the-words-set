@@ -80,6 +80,10 @@
           "default": "Покушај поново"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Ознака за приступ следећем питању",
           "default": "Следеће питање"
         },

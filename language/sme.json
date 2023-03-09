@@ -80,6 +80,10 @@
           "default": "Retry"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Next question accessibility label",
           "default": "Next question"
         },

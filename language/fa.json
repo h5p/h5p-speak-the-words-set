@@ -80,6 +80,10 @@
           "default": "تلاش مجدد"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "برچسب دسترس‌پذیری سؤال بعدی",
           "default": "سؤال بعدی"
         },
