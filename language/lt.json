@@ -94,11 +94,16 @@
         },
         {
           "label": "Atsakytų skaidrių prieigos pavadinimas",
-          "default": "Atsakyta"
+          "default": "Atsakyta",
+          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Aktyvių skaidrių prieigos pavadinimas",
           "default": "Dabar aktyvūs"
+        },
+        {
+          "label": "Active slide accessibility label",
+          "default": "Currently active"
         }
       ]
     }
