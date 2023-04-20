@@ -80,28 +80,28 @@
           "default": "Reintentar"
         },
         {
-          "label": "Finish button label",
-          "default": "Finish"
+          "label": "Etiqueta botón Terminar",
+          "default": "Terminar"
         },
         {
-          "label": "Etiqueta accesibilidad Pregunta siguiente",
+          "label": "Etiqueta de accesibilidad para Pregunta siguiente",
           "default": "Pregunta siguiente"
         },
         {
-          "label": "Etiqueta accesibilidad Pregunta anterior",
+          "label": "Etiqueta de accesibilidad para Pregunta anterior",
           "default": "Pregunta anterior"
         },
         {
-          "label": "Título Barra Navegación",
-          "description": "Títulos para preguntas en barra de navegación. \":num\" será remplazado con el número de página actual.",
+          "label": "Título de la barra de navegación",
+          "description": "Títulos para preguntas en la barra de navegación. se sustituirá \":num\"por el número de diapositiva actual.",
           "default": "Página :num"
         },
         {
-          "label": "Etiqueta accesibilidad Página contestada",
+          "label": "Etiqueta de accesibilidad para Página contestada",
           "default": "Contestada"
         },
         {
-          "label": "Etiqueta accesibilidad página activa",
+          "label": "Etiqueta de accesibilidad para página activa",
           "default": "Actualmente activa"
         }
       ]
