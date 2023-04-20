@@ -80,8 +80,8 @@
           "default": "Tentar de novo"
         },
         {
-          "label": "Finish button label",
-          "default": "Finish"
+          "label": "Etiqueta do botón Finalizar",
+          "default": "Rematar"
         },
         {
           "label": "Etiqueta de accesibilidade para seguinte pregunta",
