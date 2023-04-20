@@ -94,11 +94,16 @@
         },
         {
           "label": "సమాధానం ఇవ్వబడిన స్లయిడ్ యాక్సెసిబిలిటీ లేబుల్‌",
-          "default": "సమాధానం ఇచ్చారు"
+          "default": "సమాధానం ఇచ్చారు",
+          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "యాక్టివ్ స్లయిడ్ యాక్సెసిబిలిటీ లేబుల్‌",
           "default": "ప్రస్తుతం యాక్టివ్‌గా ఉంది"
+        },
+        {
+          "default": "Currently active",
+          "label": "Active slide accessibility label"
         }
       ]
     }
