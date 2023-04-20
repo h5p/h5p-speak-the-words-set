@@ -94,11 +94,16 @@
         },
         {
           "label": "Lebo ya ufikivu ya slaidi iliyojibiwa",
-          "default": "Lilijibiwa"
+          "default": "Lilijibiwa",
+          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Lebo ya ufikiaji wa slaidi inayotumika",
           "default": "Inatumika kwa sasa"
+        },
+        {
+          "label": "Active slide accessibility label",
+          "default": "Currently active"
         }
       ]
     }
