@@ -94,11 +94,16 @@
         },
         {
           "label": "Мітка слайдів, на які є відповіді",
-          "default": "Є відповідь"
+          "default": "Є відповідь",
+          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Мітка активних слайдів",
           "default": "Зараз активні"
+        },
+        {
+          "default": "Currently active",
+          "label": "Active slide accessibility label"
         }
       ]
     }

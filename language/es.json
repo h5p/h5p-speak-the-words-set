@@ -7,7 +7,7 @@
           "label": "Mostrar introducción"
         },
         {
-          "label": "Imagen de introducción"
+          "label": "Imagen de la introducción"
         },
         {
           "label": "Texto alternativo para imagen de introducción"
@@ -39,7 +39,7 @@
         {
           "widgets": [
             {
-              "label": "Por defecto"
+              "label": "Predeterminado"
             }
           ],
           "label": "Definir retroalimentación personalizada para cualquier rango de puntuación",
@@ -48,11 +48,11 @@
           "field": {
             "fields": [
               {
-                "label": "Rango de Puntuación"
+                "label": "Rango del Puntaje"
               },
               {},
               {
-                "label": "Realimentación para el rango de puntuación definido",
+                "label": "Retroalimentación para rango de puntaje definido",
                 "placeholder": "Escribe tu retroalimentación"
               }
             ]
@@ -80,8 +80,8 @@
           "default": "Intentar de nuevo"
         },
         {
-          "label": "Finish button label",
-          "default": "Finish"
+          "label": "Etiqueta botón Terminar",
+          "default": "Terminar"
         },
         {
           "label": "Etiqueta de accesibilidad para Pregunta siguiente",
@@ -93,7 +93,7 @@
         },
         {
           "label": "Título de la barra de navegación",
-          "description": "Títulos para preguntas en la barra de navegación. se sustituirá \":num\"por el número de diapositiva actual.",
+          "description": "Títulos para preguntas en la barra de navegación. Se sustituirá \":num\"por el número de diapositiva actual.",
           "default": "Diapositiva :num"
         },
         {

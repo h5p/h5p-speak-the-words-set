@@ -94,11 +94,16 @@
         },
         {
           "label": "Хариулттай слайдын хандалтын шошго",
-          "default": "Хариулав"
+          "default": "Хариулав",
+          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Идэвхтэй слайдад хандах боломжтой шошго",
           "default": "Одоогоор идэвхтэй"
+        },
+        {
+          "label": "Active slide accessibility label",
+          "default": "Currently active"
         }
       ]
     }
