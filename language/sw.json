@@ -80,6 +80,10 @@
           "default": "Jaribu tena"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Lebo ya ufikivu ya swali linalofuata",
           "default": "Swali linalofuata"
         },
@@ -91,11 +95,6 @@
           "label": "Mada ya upau wa urambazaji",
           "description": "Mada kwa maswali kwenye upau wa urambazaji. \":num\" vitabadilishwa na nambari halisi ya slaidi.",
           "default": "Slaidi :num"
-        },
-        {
-          "label": "Lebo ya ufikivu ya slaidi iliyojibiwa",
-          "default": "Lilijibiwa",
-          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Lebo ya ufikiaji wa slaidi inayotumika",

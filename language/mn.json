@@ -80,6 +80,10 @@
           "label": "Дахин оролдох товчлуурын шошго"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "default": "Дараагийн асуулт",
           "label": "Дараагийн асуултын хүртээмжийн шошго"
         },
@@ -91,11 +95,6 @@
           "description": "Навигацийн талбар дахь асуултуудын гарчиг. \":num\" нь слайдын бодит дугаараар солигдоно.",
           "label": "Навигацийн мөрний гарчиг",
           "default": "Слайд :num"
-        },
-        {
-          "label": "Хариулттай слайдын хандалтын шошго",
-          "default": "Хариулав",
-          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Идэвхтэй слайдад хандах боломжтой шошго",

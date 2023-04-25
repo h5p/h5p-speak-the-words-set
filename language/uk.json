@@ -80,6 +80,10 @@
           "default": "Повторити"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Мітка доступності наступного питання",
           "default": "Наступне питання"
         },
@@ -91,11 +95,6 @@
           "label": "Назва навігаційного рядка",
           "description": "Питання в рядку навігації. \":num\" буде замінено на відповідний номер слайда.",
           "default": "Слайд :num"
-        },
-        {
-          "label": "Мітка слайдів, на які є відповіді",
-          "default": "Є відповідь",
-          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Мітка активних слайдів",

@@ -80,6 +80,10 @@
           "default": "Tentar novamente"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Etiqueta de acessibilidade da próxima questão",
           "default": "Próxima questão"
         },
@@ -91,11 +95,6 @@
           "label": "Título da barra de navegação",
           "description": "Títulos para perguntas na barra de navegação. \":num\" será substituído pelo número real do slide.",
           "default": "Slide :num"
-        },
-        {
-          "label": "Etiqueta de acessibilidade do slide respondido",
-          "default": "Respondida",
-          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Etiqueta de acessibilidade do slide activo",

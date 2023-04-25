@@ -80,6 +80,10 @@
           "default": "Bandyti dar kartą"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "label": "Kito klausimo prieigos pavadinimas",
           "default": "Kitas klausimas"
         },
@@ -91,11 +95,6 @@
           "label": "Navigacijos juostos pavadinimas",
           "description": "Klausimų pavadinimai navigacijos juostoje. \":num\" bus pakeista atitinkamu skaidrės numerius.",
           "default": "Skaidrė :num"
-        },
-        {
-          "label": "Atsakytų skaidrių prieigos pavadinimas",
-          "default": "Atsakyta",
-          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "Aktyvių skaidrių prieigos pavadinimas",

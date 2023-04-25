@@ -80,6 +80,10 @@
           "label": "మళ్లీ ప్రయత్నించండి అనే బటన్ లేబుల్‌"
         },
         {
+          "label": "Finish button label",
+          "default": "Finish"
+        },
+        {
           "default": "తరువాతి ప్రశ్న",
           "label": "తదుపరి ప్రశ్న యాక్సెసబిలిటీ లేబుల్"
         },
@@ -91,11 +95,6 @@
           "description": "నావిగేషన్ బార్‌లో ప్రశ్నలకు శీర్షికలు. \":num\" అసలు స్లయిడ్ సంఖ్యతో భర్తీ చేయబడుతుంది.",
           "label": "నావిగేషన్ బార్ టైటిల్",
           "default": "స్లయిడ్: సంఖ్య"
-        },
-        {
-          "label": "సమాధానం ఇవ్వబడిన స్లయిడ్ యాక్సెసిబిలిటీ లేబుల్‌",
-          "default": "సమాధానం ఇచ్చారు",
-          "description": "Titles for questions in navigation bar. \":num\" will be replaced with the actual slide number."
         },
         {
           "label": "యాక్టివ్ స్లయిడ్ యాక్సెసిబిలిటీ లేబుల్‌",
