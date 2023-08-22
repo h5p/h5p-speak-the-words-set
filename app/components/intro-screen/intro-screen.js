@@ -36,7 +36,21 @@ export default class IntroScreen extends React.Component {
    */
   imageLoaded() {
     this.props.parent.resizeWrapper();
-  }
+  } 
+
+  /**
+   * Process HTML escaped string for use as attribute value,
+   * e.g. for alt text or title attributes.
+   *
+   * @param {string} value
+   * @return {string} WARNING! Do NOT use for innerHTML.
+   */
+  massageAttributeOutput(value) {
+    const dparser = new DOMParser().parseFromString(value, 'text/html');
+    const div = document.createElement('div');
+    div.innerHTML = dparser.documentElement.textContent;;
+    return div.textContent || div.innerText || '';
+  };
 
   /**
    * Render component whenever properties change.
@@ -52,7 +66,7 @@ export default class IntroScreen extends React.Component {
       image = (
         <img
           className='introduction-image'
-          alt={this.params.introduction.introductionImageAltText}
+          alt={this.massageAttributeOutput(this.params.introduction.introductionImageAltText)}
           onLoad={this.imageLoaded.bind(this)}
           src={imgSrc}
         />);
