@@ -52,7 +52,7 @@
               },
               {},
               {
-                "label": "Atsiliepimai apie nustatytą balų intervalą",
+                "label": "Atsiliepimai apibrėžtam balų diapazonui",
                 "placeholder": "Užpildykite atsiliepimą"
               }
             ]
@@ -80,29 +80,29 @@
           "default": "Bandyti dar kartą"
         },
         {
-          "label": "Finish button label",
-          "default": "Finish"
+          "label": "Tekstas mygtukui „Baigti\"",
+          "default": "Baigti"
         },
         {
-          "label": "Kito klausimo prieigos pavadinimas",
+          "label": "Sekančio klausimo pritaikomumo pavadinimas",
           "default": "Kitas klausimas"
         },
         {
-          "label": "Ankstesnio klausimo prieigos pavadinimas",
+          "label": "Ankstesnio klausimo pritaikomumo pavadinimas",
           "default": "Ankstesnis klausimas"
         },
         {
           "label": "Navigacijos juostos pavadinimas",
-          "description": "Klausimų pavadinimai navigacijos juostoje. \":num\" bus pakeista atitinkamu skaidrės numerius.",
-          "default": "Skaidrė :num"
+          "description": "Klausimų pavadinimai navigacijos juostoje. \":num\" bus pakeista atitinkamu skaidrės numeriu.",
+          "default": ":num skaidrė"
         },
         {
-          "label": "Aktyvių skaidrių prieigos pavadinimas",
-          "default": "Dabar aktyvūs"
+          "label": "Atsakytų skaidrių pritaikomumo pavadinimas",
+          "default": "Atsakyta"
         },
         {
-          "label": "Active slide accessibility label",
-          "default": "Currently active"
+          "label": "Aktyvios skaidrės pritaikomumo etiketė",
+          "default": "Šiuo metu aktyvi"
         }
       ]
     }
