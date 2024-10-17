@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import QuestionSet from './question-set/question-set';
 import SolutionScreen from './solution-screen/solution-screen';
 import IntroScreen from "./intro-screen/intro-screen";
+import Util from './speak-the-words-set-util';
 import './speak-the-words-set.css';
 
 /**
@@ -35,6 +36,10 @@ export default class SpeakTheWordsSet extends React.Component {
 
     this.props.parent.eventStore.on('slideAnswered', this.markSlideAsAnswered.bind(this));
     this.props.parent.eventStore.on('showSolutionScreen', this.showSolutionScreen.bind(this));
+    this.props.parent.eventStore.on('xAPIanswered', this.triggerXAPI.bind(this));
+
+    // Allow wrapper to handle Question type contract functions
+    props.onInitialized(this);
   }
 
   /**
@@ -121,6 +126,114 @@ export default class SpeakTheWordsSet extends React.Component {
   }
 
   /**
+   * Get latest score.
+   * @return {number} latest score.
+   */
+  getScore() {
+    return this.questionSet.getScore();
+  }
+
+  /**
+   * Get maximum score.
+   * @return {number} latest score.
+   */
+  getMaxScore() {
+    return this.questionSet.getMaxScore();
+  }
+
+  /**
+   * Get xAPI data.
+   * @param {object} [wrapper] H5P instance.
+   * @return {object} XAPI statement.
+   * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-6}
+   */
+  getXAPIData() {
+    return ({
+      children: this.getXAPIDataFromChildren(),
+      statement: this.getXAPIAnswerEvent(this.props.parent).data.statement
+    });
+  }
+
+  /**
+   * Trigger xAPI answered event.
+   */
+  triggerXAPI() {
+    // Let xAPI event of children trigger first
+    setTimeout(() => {
+      const xAPIData = this.getXAPIData();
+      const xAPIEvent = new H5P.XAPIEvent();
+      xAPIEvent.data.children = xAPIData.children;
+      xAPIEvent.data.statement = xAPIData.statement;
+
+      this.props.parent.trigger(xAPIEvent);
+    }, 0);
+  }
+
+  /**
+   * Get xAPI data from children.
+   * @return {object} XAPIData from children.
+   */
+  getXAPIDataFromChildren() {
+    return this.questionSet.getXAPIDataFromChildren();
+  }
+
+  /**
+   * Build xAPI answer event.
+   * @param {object} wrapper H5P instance.
+   * @return {H5P.XAPIEvent} XAPI answer event.
+   */
+  getXAPIAnswerEvent(wrapper) {
+    const xAPIEvent = this.createXAPIEvent('answered', wrapper);
+
+    xAPIEvent.setScoredResult(this.getScore(), this.getMaxScore(), wrapper,
+      true, this.getScore() === this.getMaxScore());
+
+    return xAPIEvent;
+  }
+
+  /**
+   * Create an xAPI event for SpeakTheWords.
+   * @param {string} verb Short id of the verb we want to trigger.
+   * @param {object} wrapper H5P instance.
+   * @return {H5P.XAPIEvent} Event template.
+   */
+  createXAPIEvent(verb, wrapper = {}) {
+
+    const xAPIEvent = new H5P.XAPIEvent();
+
+    xAPIEvent.setActor();
+    xAPIEvent.setVerb(verb);
+    xAPIEvent.setObject(wrapper);
+    xAPIEvent.setContext(wrapper);
+
+    Util.extend(
+      xAPIEvent.getVerifiedStatementValue(['object', 'definition']),
+      this.getxAPIDefinition());
+    return xAPIEvent;
+  }
+
+  /**
+   * Get the xAPI definition for the xAPI object.
+   * @return {object} XAPI definition.
+   */
+  getxAPIDefinition() {
+    return ({
+      name: {'en-US': H5P.createTitle('Speak the Words Set')},
+      description: {'en-US': ''},
+      type: 'http://adlnet.gov/expapi/activities/cmi.interaction',
+      interactionType: 'compound'
+    });
+  }
+
+  /**
+   * Get reference to QuestionSet object.
+   * @param {object} QuestionSet object.
+   */
+  handleInitialized(questionSet) {
+    this.questionSet = questionSet;
+  }
+
+  /**
    * Renders the component.
    * @returns {XML}
    */
@@ -160,6 +273,7 @@ export default class SpeakTheWordsSet extends React.Component {
           showingQuestions={this.state.viewState === viewState.showingQuestions}
           answeredSlides={this.state.answeredSlides}
           parent={this.props.parent}
+          onInitialized={this.handleInitialized.bind(this)}
         />
         {solutionScreen}
       </div>
