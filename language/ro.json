@@ -1,0 +1,110 @@
+{
+  "semantics": [
+    {
+      "label": "Introducere",
+      "fields": [
+        {
+          "label": "Afișează introducerea"
+        },
+        {
+          "label": "Imagine de introducere"
+        },
+        {
+          "label": "Text alternativ pentru imaginea de introducere"
+        },
+        {
+          "label": "Titlu"
+        },
+        {
+          "label": "Text introductiv",
+          "description": "Acest titlu va fi afișat deasupra textului introductiv."
+        }
+      ]
+    },
+    {
+      "label": "Întrebări",
+      "widgets": [
+        {
+          "label": "Implicit"
+        }
+      ],
+      "entity": "Întrebare",
+      "field": {
+        "label": "Întrebare"
+      }
+    },
+    {
+      "label": "Feedback general",
+      "fields": [
+        {
+          "widgets": [
+            {
+              "label": "Implicit"
+            }
+          ],
+          "label": "Definiți feedback personalizat pentru orice interval de scor",
+          "description": "Apăsați butonul „Adaugă interval” pentru a adăuga oricâte intervale aveți nevoie. Exemplu: 0-20% Scor slab, 21-91% Scor mediu, 91-100% Scor excelent!",
+          "entity": "interval",
+          "field": {
+            "fields": [
+              {
+                "label": "Interval de scor"
+              },
+              {},
+              {
+                "label": "Feedback pentru intervalul de scor definit",
+                "placeholder": "Completați feedback-ul"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Etichete și texte pentru setul „Rostește cuvintele”",
+      "fields": [
+        {
+          "label": "Eticheta butonului de introducere",
+          "default": "Începe cursul!"
+        },
+        {
+          "label": "Eticheta rezultatelor pe ecranul de soluții",
+          "default": "Rezultatele tale:"
+        },
+        {
+          "label": "Eticheta butonului de afișare a soluțiilor",
+          "default": "Arată soluția"
+        },
+        {
+          "label": "Eticheta butonului de reîncercare",
+          "default": "Reîncearcă"
+        },
+        {
+          "label": "Eticheta butonului de finalizare",
+          "default": "Finalizează"
+        },
+        {
+          "label": "Etichetă de accesibilitate pentru întrebarea următoare",
+          "default": "Întrebarea următoare"
+        },
+        {
+          "label": "Etichetă de accesibilitate pentru întrebarea anterioară",
+          "default": "Întrebarea anterioară"
+        },
+        {
+          "label": "Titlu bară de navigare",
+          "description": "Titluri pentru întrebări în bara de navigare. „:num” va fi înlocuit cu numărul real al diapozitivului.",
+          "default": "Diapozitivul :num"
+        },
+        {
+          "label": "Etichetă de accesibilitate pentru diapozitivul cu răspuns",
+          "default": "Cu răspuns"
+        },
+        {
+          "label": "Etichetă de accesibilitate pentru diapozitivul activ",
+          "default": "Activ în prezent"
+        }
+      ]
+    }
+  ]
+}
