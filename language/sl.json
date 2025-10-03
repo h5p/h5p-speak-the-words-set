@@ -80,8 +80,8 @@
           "default": "Poskusi ponovno"
         },
         {
-          "label": "Finish button label",
-          "default": "Finish"
+          "label": "Besedilo gumba za potrditev",
+          "default": "Potrdi"
         },
         {
           "label": "Besedilo za gumb \"Naslednje vprašanje\"",
